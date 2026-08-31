@@ -24,3 +24,7 @@ figures/*.pdf
 # Editor
 *.swp
 .vscode/
+_private/
+data/resampled/
+*.log
+*.pyc
