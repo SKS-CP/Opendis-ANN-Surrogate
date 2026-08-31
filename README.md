@@ -52,7 +52,7 @@ uniaxial at 2.05×10¹² m⁻².
 | Loading rate | 4, 6, 8 ×10⁷ MPa/s |
 | Initial density | 0.957, 1.43, 2.05 ×10¹² m⁻² |
 
-Runs are split 44 training / 8 validation / 16 test, grouped at run level so
+Runs are split 52 training / 8 validation / 8 test, grouped at run level so
 that no run appears in more than one split.
 
 Full documentation of the file naming, units and column definitions is in

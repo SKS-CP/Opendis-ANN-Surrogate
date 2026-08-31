@@ -2,19 +2,21 @@
 
 | File | Contents |
 |---|---|
-| `01_ddd_ann_lstm_full.ipynb` | DDD drivers (PyExaDiS), ANN and LSTM training in one notebook. Checkpoints `dpnet_v7_best.pt`, `rhonet_v7_best.pt`. |
-| `02_ann_v8.ipynb` | ANN training, later revision. Checkpoints `dpnet_v8_best.pt`, `rhonet_v8_best.pt`. |
+| `01_ddd_ann_lstm_full.ipynb` | DDD drivers (PyExaDiS), and ANN and LSTM training and evaluation. Writes checkpoints `dpnet_v7_best.pt` and `rhonet_v7_best.pt` to `models/`. |
 
-**Before publishing, confirm which version produced the numbers in the paper.**
-Both notebooks are present and they write different checkpoint names (v7 vs v8).
-Whichever is authoritative should be the one the README points at; the other
-should be removed or clearly labelled as superseded.
+## Data path
 
-Both notebooks currently read the dataset from a hard-coded Colab path:
+The notebook reads the resampled database from `data/resampled/`, relative to the
+repository root. Build it first:
 
 ```
-/content/SimulationCsvs.2721.zip
+python3 scripts/prepare_data.py --raw data/raw --out data/resampled
 ```
 
-This must be replaced with a relative path into `data/` before release, or the
-notebooks will not run for anyone else.
+## Supervision modes
+
+- **Mode A** supplies the true dislocation density at each step and rolls out the
+  plastic strain only.
+- **Mode B** is the fully coupled recursive rollout, in which both the plastic
+  rate of deformation and the dislocation density are predicted and fed forward.
+  This is the mode reported in the manuscript.
