@@ -2,7 +2,7 @@
 
 | File | Contents |
 |---|---|
-| `01_ddd_ann_lstm_full.ipynb` | DDD drivers (PyExaDiS), and ANN and LSTM training and evaluation. Writes checkpoints `dpnet_v7_best.pt` and `rhonet_v7_best.pt` to `models/`. |
+| `ANNCODEMTECH.ipynb` | DDD drivers (PyExaDiS), and ANN and LSTM training and evaluation. Writes checkpoints `dpnet_v7_best.pt` and `rhonet_v7_best.pt` to `models/`. |
 
 ## Data path
 
